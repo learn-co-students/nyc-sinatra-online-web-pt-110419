@@ -1,3 +1,8 @@
 class LandmarksController < ApplicationController
-  # add controller methods
+
+  get '/landmarks' do
+    @landmarks = Landmark.all.sort_by(&:name)
+    erb :'landmarks/index'
+  end
+
 end
