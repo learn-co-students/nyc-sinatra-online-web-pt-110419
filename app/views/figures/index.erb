@@ -1,6 +1,13 @@
 <h2>All Historical Figures</h2>
 
-<!-- add content here -->
 
+<ol>
+<% @figures.each do |figure,i|%>
+<li>
+<a href="/figures/<%=figure.id%>"><%=figure.name%></a>
+</li>
+
+<%end%>
+</ol>
 <a class="button" href="/figures">Figures</a>
 <a class="button" href="/">Home</a>
