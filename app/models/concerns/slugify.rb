@@ -5,7 +5,7 @@ module Slugify
       end
   end
     module  ClassMethods
-      def self.find_by_slug(url)
+      def find_by_slug(url)
         find {|object| object.slug.include?(url)}
       end
     end
