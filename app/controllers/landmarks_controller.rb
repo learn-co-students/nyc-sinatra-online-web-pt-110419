@@ -1,7 +1,7 @@
 class LandmarksController < ApplicationController
 
   get '/landmarks' do
-    @landmarks = Landmark.all.sort_by(&:name)
+    @landmarks = Landmark.all.sort_by {|landmark| landmark.year_completed.to_i}
     erb :'landmarks/index'
   end
 
